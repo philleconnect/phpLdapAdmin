@@ -3,11 +3,9 @@ version: '2'
 services:
 
   php_ldap_admin:
-    build: php_ldap_admin/
+    build: .
     #image: philleconnect/php_ldap_admin:latest
     restart: always
-    links:
-      - "ldap"
     ports:
       - "89:80"
     container_name: php_ldap_admin
@@ -15,8 +13,8 @@ services:
     # 'dpkg-reconfigure slapd' hangs when a domain with an underscore _ is used
     # (which is unfortunately docker-compose default behavior)
     # so an alias is necessary if no custom (separately started) network shall be used:
-    networks:
-      - philleconnect
+#    networks:
+#      - philleconnect
     env_file:
       - ./settings.env
     #volumes:

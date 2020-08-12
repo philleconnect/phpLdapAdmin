@@ -3,7 +3,7 @@
         {
             "name":"phpldapadmin",
             "hostname":"phpldapadmin",
-            "url":"https://jkm-marburg.de/pcsm/phpldapadmin/phpldapadmin.tar.gz",
+            "url":"https://github.com/philleconnect/phpLdapAdmin/releases/download/1.0.0/phpldapadmin.tar.gz",
             "ports":[
                 {
                     "external":89,
